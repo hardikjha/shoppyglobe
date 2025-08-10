@@ -11,17 +11,15 @@ export default function Header() {
     <header className="header">
       <nav className="nav">
         <Link to="/" className="brand">
-          <img 
-            src="/assets/logo.PNG" 
-            alt="ShoppyGlobe Logo" 
-            className="logo"
-          />
+          <img src="/assets/logo.PNG" alt="ShoppyGlobe Logo" className="logo" />
           ShoppyGlobe
         </Link>
         <div className="nav-right">
-          <Link to="/cart" className="cart-link">
-            <FaShoppingCart size={28} />
-            <span className="cart-count">{totalItems}</span>
+          <Link to="/cart" className="cart-link" aria-label="View cart">
+            <span className="cart-icon-wrapper">
+              <FaShoppingCart className="cart-icon" size={22} />
+              <span className="cart-count">{totalItems}</span>
+            </span>
           </Link>
         </div>
       </nav>

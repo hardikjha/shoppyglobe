@@ -6,7 +6,19 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+* {
+  box-sizing: border-box; 
+}
+
+.container, .header, .footer, .product-grid, .cart-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 #root {
   display: flex;
@@ -24,7 +36,8 @@ body {
   font-optical-sizing: auto;
   margin:0; 
   background-image: linear-gradient(rgba(0,0,0,0.6)), url(../src/img/projectbg.jpg);
-  background-size: auto;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Header section styling */
@@ -35,6 +48,7 @@ body {
   border-bottom:1px solid #eee; 
   padding:0; 
   height: 70px;
+  overflow-y: hidden;
 }
 
 
@@ -42,7 +56,8 @@ body {
   display:flex; 
   justify-content:space-between; 
   align-items:center; 
-  width: 100%; 
+  width: 100%;
+  max-width: 100%; 
   margin: 0;
 }
 
@@ -77,7 +92,7 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
   margin-top: 50px;
   padding: 20px;
@@ -149,6 +164,7 @@ body {
   background: linear-gradient(135deg, #ff6a00, #ee0979);
   color: white;
   border: none;
+  margin: 8px;
   padding: 10px 18px;
   border-radius: 30px;
   cursor: pointer;
@@ -170,6 +186,12 @@ body {
   border-radius: 20px;
 }
 
+.cart-page {
+  min-height: calc(100vh - 80px); /* subtract footer height */
+  display: flex;
+  flex-direction: column;
+}
+
 /* Cart Page Container with glass effect */
 
 .cart-container {
@@ -179,13 +201,20 @@ body {
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 20px;
-  max-width: 900px;
+  max-width: 100%;
+  flex: 1;
   margin: 40px auto;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   color: white;
 }
 
 /* Product details container */ 
+
+.product-details-page {
+  min-height: calc(100vh - 80px); 
+  display: flex;
+  flex-direction: column;
+}
 
 .product-detail-container {
   background: rgba(255, 255, 255, 0.08);
@@ -194,13 +223,15 @@ body {
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 20px;
-  max-width: 900px;
+  max-width: 100%;
   margin: 40px auto;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
   gap: 20px;
   color: white;
+  align-items: center;
 }
 
 .product-detail-image {
@@ -208,9 +239,8 @@ body {
 }
 
 .product-detail-image img {
-  width: 100%;
+  width: 60%;
   border-radius: 12px;
-  object-fit: cover;
 }
 
 .product-detail-info {
@@ -271,9 +301,9 @@ body {
 
 @media (max-width: 768px) {
   .nav {
-    flex-direction: column;
     gap: 10px;
     text-align: center;
+    flex-wrap: wrap;
   }
 
   .product-grid {
@@ -302,16 +332,28 @@ body {
   .product-detail-container {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .product-detail-image img {
     max-width: 100%;
     height: auto;
+    margin-top: 40px;
   }
 }
 
 /* iPhone SE & small devices */
 @media (max-width: 375px) {
+  .header{
+    height: 50px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+  
   body {
     font-size: 14px;
   }
@@ -338,6 +380,7 @@ body {
   .btn-add-to-cart {
     padding: 8px 14px;
     font-size: 0.85rem;
+    margin: 8px;
   }
 
   .cart-container {

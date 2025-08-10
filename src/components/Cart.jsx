@@ -8,11 +8,12 @@ export default function Cart() {
   const total = cart.reduce((sum, item) => sum + (item.price || 0) * (item.quantity || 0), 0);
 
   return (
-    <div className="cart-container">
-      <h1>Your Cart</h1>
-      {cart.length === 0 ? (
-        <p>Cart is empty</p>
-      ) : (
+    <div className="cart-page">
+      <div className="cart-container">
+        <h1>Your Cart</h1>
+        {cart.length === 0 ? (
+         <p>Cart is empty</p>
+       ) : (
         <>
           {cart.map(item => (
             <CartItem key={item.id} item={item} />
@@ -27,6 +28,7 @@ export default function Cart() {
           </Link>
         </>
       )}
-    </div>
+      </div>
+    </div>  
   );
 }
