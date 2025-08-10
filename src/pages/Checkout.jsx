@@ -5,16 +5,15 @@ export default function Checkout() {
   const navigate = useNavigate();
 
   return (
-    <div className="cart-container">
+    <div className="cart-container checkout-page">
       <h2>Checkout</h2>
       <p>Integrate payment / order form here.</p>
 
       <button className="btn-gradient">Submit Order</button>
-
       <button 
         className="btn-gradient" 
         style={{ marginLeft: 8 }}
-        onClick={() => navigate(-1)} 
+        onClick={() => navigate(-1)}
       >
         Go Back
       </button>

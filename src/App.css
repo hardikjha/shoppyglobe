@@ -257,5 +257,106 @@ body {
   transform: scale(1.05);
 }
 
+.checkout-page {
+  min-height: calc(100vh - 140px); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+
+/* Responsive Styling */
+
+/* iPad Mini  */
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .product-card img {
+    height: 140px;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .btn-gradient, 
+  .btn-add-to-cart {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .cart-container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .product-detail-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-detail-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* iPhone SE & small devices */
+@media (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+
+  .nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .product-card img {
+    height: 120px;
+  }
+
+  .btn-gradient,
+  .btn-add-to-cart {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .cart-container {
+    padding: 10px;
+  }
+
+  .product-detail-container {
+    padding: 15px;
+  }
+
+  .product-detail-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .product-detail-price {
+    font-size: 1.1rem;
+  }
+}
+
+
 
 
