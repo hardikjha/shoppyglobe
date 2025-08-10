@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import NotFound from './components/NotFound';
 
@@ -11,22 +12,15 @@ export default function App() {
   return (
     <>
       <Header />
-      <Suspense fallback={<div style={{padding:20}}>Loading...</div>}>
-        <RoutesWrap />
+      <Suspense fallback={<div style={{ padding: 20 }}>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </Suspense>
     </>
-  );
-}
-
-function RoutesWrap() {
-  const { Routes, Route } = require('react-router-dom');
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/checkout" element={<Checkout />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
   );
 }

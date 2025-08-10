@@ -21,7 +21,7 @@ export default function ProductList() {
         placeholder="Search products..."
         value={query}
         onChange={e => setQuery(e.target.value)}
-        style={{padding:'8px', width:'100%', maxWidth:400, marginBottom:12}}
+        style={{padding:'8px', width:'100%', maxWidth:400, marginBottom:12, borderRadius:'12px'}}
       />
       <div className="product-grid">
         {filtered.map(p => <ProductItem key={p.id} product={p} />)}
