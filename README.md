@@ -34,7 +34,7 @@ Cart Page
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/shoppyglobe.git
+git clone https://github.com/hardikjha/shoppyglobe.git
 cd shoppyglobe
 ```
 
@@ -47,7 +47,7 @@ npm install
 ```bash
 npm run dev
 ```
-Then open: **http://localhost:5173**
+Then open: **http://localhost:5177**
 
 ---
 
