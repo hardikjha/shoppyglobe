@@ -9,7 +9,14 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="nav">
-        <Link to="/" className="brand">ShoppyGlobe</Link>
+        <Link to="/" className="brand">
+          <img 
+            src="/assets/logo.PNG" 
+            alt="ShoppyGlobe Logo" 
+            className="logo"
+          />
+          ShoppyGlobe
+        </Link>
         <div className="nav-right">
           <Link to="/cart">Cart ({totalItems})</Link>
         </div>

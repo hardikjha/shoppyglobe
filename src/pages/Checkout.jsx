@@ -1,4 +1,12 @@
-import React from 'react';
 export default function Checkout() {
-  return <div style={{padding:20}}><h2>Checkout (placeholder)</h2><p>Integrate payment / order form here.</p></div>;
+  return (
+    <div className="cart-container">
+      <h2>Checkout</h2>
+      <p>Integrate payment / order form here.</p>
+      <button className="btn-gradient">Submit Order</button>
+      <button className="btn-gradient" style={{ marginLeft: 8 }}>
+        Go Back
+      </button>
+    </div>
+  );
 }
