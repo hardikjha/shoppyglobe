@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { FaShoppingCart } from 'react-icons/fa';
 
 export default function Header() {
   const cart = useSelector(state => state.cart || []);
@@ -18,7 +19,10 @@ export default function Header() {
           ShoppyGlobe
         </Link>
         <div className="nav-right">
-          <Link to="/cart">Cart ({totalItems})</Link>
+          <Link to="/cart" className="cart-link">
+            <FaShoppingCart size={28} />
+            <span className="cart-count">{totalItems}</span>
+          </Link>
         </div>
       </nav>
     </header>

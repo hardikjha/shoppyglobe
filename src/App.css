@@ -22,7 +22,7 @@ body {
   background-image: linear-gradient(315deg, #f1f2f6 0%, #c9c6c6 74%);
   border-bottom:1px solid #eee; 
   padding:0; 
-  height: 60px;
+  height: 70px;
 }
 
 
@@ -35,12 +35,16 @@ body {
 }
 
 .nav-right{
-  margin-right: 15px;
+  margin-right: 25px;
+}
+
+.cart-link{
+  text-decoration: none;
 }
 
 .logo {
-  height: 60px;
-  width: 60px;
+  height: 70px;
+  width: 70px;
   margin-right: 20px;
 }
 
@@ -59,9 +63,10 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 30px;
   margin-top: 50px;
+  padding: 20px;
 }
 
 /* Product card with glass effect */
