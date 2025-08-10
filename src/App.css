@@ -8,6 +8,17 @@ html, body {
   padding: 0;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; 
+}
+
+
 body { 
   font-family: "Libre Franklin", sans-serif;
   font-optical-sizing: auto;
@@ -16,6 +27,7 @@ body {
   background-size: auto;
 }
 
+/* Header section styling */
 
 .header {
   background-color: #f1f2f6;
@@ -48,6 +60,7 @@ body {
   margin-right: 20px;
 }
 
+/* Logo and title */
 
 .brand { 
   display: flex;
@@ -60,6 +73,7 @@ body {
   color:inherit; 
 }
 
+/* Grid setup for product cards  */
 
 .product-grid {
   display: grid;
@@ -70,6 +84,7 @@ body {
 }
 
 /* Product card with glass effect */
+
 .product-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -107,6 +122,7 @@ body {
 }
 
 /* Add to Cart button */
+
 .product-card button {
   background: linear-gradient(135deg, #ff6a00, #ee0979);
   color: white;
@@ -147,13 +163,15 @@ body {
 }
 
 /* Small buttons (for + / - / remove) */
+
 .btn-small {
   padding: 6px 12px;
   font-size: 0.8rem;
   border-radius: 20px;
 }
 
-/* Glassmorphism Cart Page Container */
+/* Cart Page Container with glass effect */
+
 .cart-container {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
@@ -166,6 +184,8 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   color: white;
 }
+
+/* Product details container */ 
 
 .product-detail-container {
   background: rgba(255, 255, 255, 0.08);
@@ -210,6 +230,7 @@ body {
 }
 
 /* Price styling */
+
 .product-detail-price {
   font-size: 1.3rem;
   font-weight: bold;
@@ -218,6 +239,7 @@ body {
 }
 
 /* Add to Cart button */
+
 .btn-add-to-cart {
   background: linear-gradient(135deg, #ff6a00, #ee0979);
   color: white;
@@ -234,3 +256,6 @@ body {
   background: linear-gradient(135deg, #ff7e33, #ff3d99);
   transform: scale(1.05);
 }
+
+
+
