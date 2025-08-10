@@ -1,12 +1,56 @@
-# React + Vite
+# 🛒 ShoppyGlobe - One Stop Shop; E-commerce Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ShoppyGlobe is an e-commerce web application built with **React** with product listings, detailed product pages, a shopping cart, and a smooth checkout flow.  
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Product Listings** – Browse products in a responsive grid.
+- **Product Details** – View detailed descriptions and add items to cart.
+- **Shopping Cart** – Add/remove items, adjust quantities, and see totals in real-time.
+- **Checkout Page** – Smooth checkout process.
+- **Responsive Design** – Optimized for mobile, tablet, and desktop.
+- **Cart Badge** – Real-time item count displayed in header.
 
-## Expanding the ESLint configuration
+## Previews
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Home Screen
+
+![Home Screen](src/img/sgpreview.PNG)
+
+Cart Page
+
+![Cart](src/img/sg2.PNG)
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, React Router, Redux
+- **Styling:** CSS3, Flexbox, CSS Grid, Media Queries
+- **Icons:** react-icons
+- **Build Tool:** Vite
+
+---
+
+##  Installation & Setup
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/shoppyglobe.git
+cd shoppyglobe
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Run the development server**
+```bash
+npm run dev
+```
+Then open: **http://localhost:5173**
+
+---
+
+[Repository Link](https://github.com/hardikjha/shoppyglobe)
+
+**Made by Hardik Kumar**
