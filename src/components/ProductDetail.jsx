@@ -10,24 +10,31 @@ export default function ProductDetail() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let mounted = true;
     fetch(`https://dummyjson.com/products/${id}`)
       .then(res => { if (!res.ok) throw new Error('Failed to fetch'); return res.json(); })
-      .then(json => { if (mounted) setProduct(json); })
-      .catch(err => { if (mounted) setError(err.message); });
-    return () => { mounted = false; }
+      .then(json => setProduct(json))
+      .catch(err => setError(err.message));
   }, [id]);
 
-  if (error) return <div>Error: {error}</div>;
-  if (!product) return <div>Loading...</div>;
+  if (error) return <div className="product-detail-container">Error: {error}</div>;
+  if (!product) return <div className="product-detail-container">Loading...</div>;
 
   return (
-    <div style={{padding:20}}>
-      <img src={product.thumbnail} alt={product.title} style={{maxWidth:300}} />
-      <h2>{product.title}</h2>
-      <p>{product.description}</p>
-      <p>₹{product.price}</p>
-      <button onClick={() => dispatch(addToCart(product))}>Add to cart</button>
+    <div className="product-detail-container">
+      <div className="product-detail-image">
+        <img src={product.thumbnail} alt={product.title} />
+      </div>
+      <div className="product-detail-info">
+        <h2>{product.title}</h2>
+        <p>{product.description}</p>
+        <div className="product-detail-price">₹{product.price}</div>
+        <button 
+          className="btn-add-to-cart"
+          onClick={() => dispatch(addToCart(product))}
+        >
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 }
